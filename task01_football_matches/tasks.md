@@ -74,7 +74,7 @@ Each of the questions/tasks below can be answered using a `SELECT` query. When y
 ```sql
 <!-- SELECT * FROM Divisions WHERE country = 'England';
 <!-- SELECT * FROM Matches WHERE division_code= 'E0';
-<!-- SELECT *, (fthg+ ftag) AS TG FROM Matches WHERE division_code = 'E0'  ORDER BY TG DESC, fthg DESC LIMIT 1;   -->
+<!-- SELECT *, (fthg+ ftag) AS TG FROM Matches WHERE division_code = 'E0'  ORDER BY TG DESC, fthg DESC;   -->
 
 
 ```
