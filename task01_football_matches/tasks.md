@@ -5,7 +5,7 @@ Each of the questions/tasks below can be answered using a `SELECT` query. When y
 1) Find all the matches from 2017.
 
 ```sql
-<!-- SELECT * FROM Matches where season >=2017 ORDER BY SEASON ASC;  -->
+<!-- SELECT * FROM Matches where season =2017 -->
 
 
 ```
@@ -21,7 +21,7 @@ Each of the questions/tasks below can be answered using a `SELECT` query. When y
 3) What are the names of the Scottish divisions included?
 
 ```sql
-<!-- SELECT * FROM Divisions WHERE name like ('%Scottish%'); -->
+<!-- SELECT name FROM Divisions Where country = 'Scotland'; -->
 
 
 ```
@@ -82,8 +82,8 @@ Each of the questions/tasks below can be answered using a `SELECT` query. When y
 10) Find the name of the division in which the most goals were scored in a single season and the year in which it happened.
 
 ```sql
-<!-- SELECT division_code, season, (fthg+ ftag) AS TG FROM Matches ORDER BY TG DESC, fthg DESC LIMIT 1; 
-<!-- SELECT name FROM Divisions WHERE code = 'E0';
+<!--  SELECT division_code, season, SUM(fthg + ftag) AS STG FROM Matches GROUP BY division_code , season ORDER BY STG DESC LIMIT 1;
+<!--SELECT name FROM Divisions WHERE code = 'EC';
  -->
 
 
